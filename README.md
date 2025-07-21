@@ -48,6 +48,68 @@ python main.py
 # Open manually: http://127.0.0.1:5000
 ```
 
+## Sample Output
+---
+```
+(.venv) PS C:\Users\ummea\MLOps-end-to-end-pipeline-with-MLflow> python .\main.py
+[2025-07-21 03:12:17,730: INFO: main: >>>>>> stage Data Ingestion stage started <<<<<<]
+[2025-07-21 03:12:17,731: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-07-21 03:12:17,731: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-07-21 03:12:17,731: INFO: common: yaml file: schema.yaml loaded successfully]
+[2025-07-21 03:12:17,731: INFO: common: created directory at: artifacts]
+[2025-07-21 03:12:17,737: INFO: common: created directory at: artifacts/data_ingestion]
+[2025-07-21 03:12:17,738: INFO: data_ingestion: File already exists of size: ~ 23 KB]
+[2025-07-21 03:12:17,742: INFO: main: >>>>>> stage Data Ingestion stage completed <<<<<<
+
+x==========x]
+[2025-07-21 03:12:17,742: INFO: main: >>>>>> stage Data Validation stage started <<<<<<]
+[2025-07-21 03:12:17,744: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-07-21 03:12:17,746: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-07-21 03:12:17,748: INFO: common: yaml file: schema.yaml loaded successfully]
+[2025-07-21 03:12:17,749: INFO: common: created directory at: artifacts]
+[2025-07-21 03:12:17,749: INFO: common: created directory at: artifacts/data_validation]
+[2025-07-21 03:12:17,777: INFO: main: >>>>>> stage Data Validation stage completed <<<<<<
+
+x==========x]
+[2025-07-21 03:12:17,777: INFO: main: >>>>>> stage Data Transformation stage started <<<<<<]
+[2025-07-21 03:12:17,789: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-07-21 03:12:17,791: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-07-21 03:12:17,793: INFO: common: yaml file: schema.yaml loaded successfully]
+[2025-07-21 03:12:17,794: INFO: common: created directory at: artifacts]
+[2025-07-21 03:12:17,794: INFO: common: created directory at: artifacts/data_transformation]
+[2025-07-21 03:12:17,815: INFO: data_transformation: Splited data into training and test sets]        
+[2025-07-21 03:12:17,815: INFO: data_transformation: (1199, 12)]
+[2025-07-21 03:12:17,815: INFO: data_transformation: (400, 12)]
+(1199, 12)
+(400, 12)
+[2025-07-21 03:12:17,815: INFO: main: >>>>>> stage Data Transformation stage completed <<<<<<
+
+x==========x]
+[2025-07-21 03:12:17,815: INFO: main: >>>>>> stage Model Trainer stage started <<<<<<]
+[2025-07-21 03:12:17,818: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-07-21 03:12:17,818: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-07-21 03:12:17,822: INFO: common: yaml file: schema.yaml loaded successfully]
+[2025-07-21 03:12:17,822: INFO: common: created directory at: artifacts]
+[2025-07-21 03:12:17,826: INFO: common: created directory at: artifacts/model_trainer]
+C:\Users\ummea\MLOps-end-to-end-pipeline-with-MLflow\.venv\Lib\site-packages\_distutils_hack\__init__.py:33: UserWarning: Setuptools is replacing distutils.
+  warnings.warn("Setuptools is replacing distutils.")
+[2025-07-21 03:12:25,136: INFO: model_trainer: Model trained and logged to MLflow. RMSE: 0.6790, R2: 0.2533]
+[2025-07-21 03:12:25,157: INFO: main: >>>>>> stage Model Trainer stage completed <<<<<<
+
+x==========x]
+[2025-07-21 03:12:25,157: INFO: main: >>>>>> stage Model evaluation stage started <<<<<<]
+[2025-07-21 03:12:25,161: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2025-07-21 03:12:25,163: INFO: common: yaml file: params.yaml loaded successfully]
+[2025-07-21 03:12:25,165: INFO: common: yaml file: schema.yaml loaded successfully]
+[2025-07-21 03:12:25,166: INFO: common: created directory at: artifacts]
+[2025-07-21 03:12:25,166: INFO: common: created directory at: artifacts/model_evaluation]
+[2025-07-21 03:12:25,217: INFO: common: json file saved at: artifacts\model_evaluation\metrics.json]  
+[2025-07-21 03:12:28,989: INFO: main: >>>>>> stage Model evaluation stage completed <<<<<<
+
+x==========x]
+```
+---
+<img width="1907" height="867" alt="image" src="https://github.com/user-attachments/assets/fb57964f-53cd-447b-b885-f6131ab244bb" />
 
 
 ```bash

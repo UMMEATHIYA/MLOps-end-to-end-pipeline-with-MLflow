@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/Users/ummea/MLOps-end-to-end-pipeline-with-MLflow/mlruns/0/ca632c3c550a43c6b08fe7879d997168/artifacts
+end_time: 1753084027049
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: ca632c3c550a43c6b08fe7879d997168
+run_name: hilarious-hen-273
+run_uuid: ca632c3c550a43c6b08fe7879d997168
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1753084011611
+status: 3
+tags: []
+user_id: ummea

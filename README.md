@@ -23,23 +23,31 @@
 Clone the repository
 
 ```bash
-https://github.com/entbappy/End-to-end-Machine-Learning-Project-with-MLflow
+https://github.com/UMMEATHIYA/MLOps-end-to-end-pipeline-with-MLflow.git
 ```
 ### STEP 01- Create a conda environment after opening the repository
-
-```bash
-conda create -n mlproj python=3.8 -y
 ```
+# Create virtual environment
+python -m venv .venv
 
-```bash
-conda activate mlproj
-```
+# Activate virtual environment
+source .venv/Scripts/activate  # For Windows Git Bash
+# source .venv/bin/activate    # For Mac/Linux
 
-
-### STEP 02- install the requirements
-```bash
+# Install dependencies
+pip install --upgrade pip
 pip install -r requirements.txt
+
+# Start MLflow tracking server (run in a new terminal if needed)
+mlflow ui --backend-store-uri sqlite:///mlruns.db --host 127.0.0.1 --port 5000
+
+# Run the ML pipeline
+python main.py
+
+# Open MLflow UI
+# Open manually: http://127.0.0.1:5000
 ```
+
 
 
 ```bash
